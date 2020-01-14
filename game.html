@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Click! | Game</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="gameStyle.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <ul class="list1">
+        <li class="listItem1" onclick="goToHome()">Back</li>
+      </ul>
+    </div>
+    <div class="statsDiv">
+      <p id="time1" class="statsP">Time: 0</p>
+      <p id="score1" class="statsP">Score: 0</p>
+      <p id="accuracy1" class="statsP">Accuracy: N/A</p>
+      <p id="highscore1" class="statsP">Highscore: 0</p>
+    </div>
+    <div class="gameDiv">
+      <div class="boardDiv" onclick="miss1()">
+        <div id="circle01" class="circle" onclick="moveCircle()"></div>
+      </div>
+      <div id="cover01" class="cover">
+        <button
+          id="button01"
+          class="startButton"
+          onclick="startGame(), startGame2(), startGame3()"
+        >
+          START!
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="main2.js"></script>
+</html>
