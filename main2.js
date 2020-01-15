@@ -11,13 +11,18 @@ let highscore = 0;
 let clicks = 0;
 let miss = 0;
 
+let selectMode = document.getElementById("selection");
+let board = document.getElementById("board1");
+
+let maxWidth = 65;
+
 function getRanNum() {
   ranNumb1 = Math.floor(Math.random() * 80) + 5;
   ranNumb2 = Math.floor(Math.random() * 80) + 5;
   ranNumb3 = Math.floor(Math.random() * 80) + 5;
   ranNumb4 = Math.floor(Math.random() * 80) + 5;
 
-  ranNumb5 = Math.floor(Math.random() * 75) + 25;
+  ranNumb5 = Math.floor(Math.random() * maxWidth) + 25;
 }
 
 function moveCircle() {
@@ -41,11 +46,13 @@ function miss1() {
 function startGame() {
   document.getElementById("circle01").style.display = "block";
   document.getElementById("cover01").style.display = "none";
+  document.getElementById("select1").style.display = "none";
 
   seconds--;
   if (seconds < 0) {
     document.getElementById("circle01").style.display = "none";
     document.getElementById("cover01").style.display = "block";
+    document.getElementById("select1").style.display = "block";
 
     if (score > highscore) {
       highscore = score;
@@ -80,4 +87,24 @@ function goToHome() {
 
 function goToGame() {
   window.location.href = "game.html";
+}
+
+function newMode() {
+  if (selectMode.value == "easy") {
+    board.style.width = "400px";
+    board.style.height = "400px";
+    maxWidth = 65;
+  } else if (selectMode.value == "normal") {
+    board.style.width = "600px";
+    board.style.height = "600px";
+    maxWidth = 65;
+  } else if (selectMode.value == "hard") {
+    board.style.width = "800px";
+    board.style.height = "800px";
+    maxWidth = 65;
+  } else if (selectMode.value == "insane") {
+    board.style.width = "900px";
+    board.style.height = "900px";
+    maxWidth = 25;
+  }
 }

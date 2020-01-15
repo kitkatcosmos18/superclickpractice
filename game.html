@@ -24,7 +24,7 @@
       <p id="highscore1" class="statsP">Highscore: 0</p>
     </div>
     <div class="gameDiv">
-      <div class="boardDiv" onclick="miss1()">
+      <div id="board1" class="boardDiv" onclick="miss1()">
         <div id="circle01" class="circle" onclick="moveCircle()"></div>
       </div>
       <div id="cover01" class="cover">
@@ -36,6 +36,18 @@
           START!
         </button>
       </div>
+    </div>
+    <div class="gamemodeDiv">
+      <p class="gamemodeP">Difficulty:</p>
+      <select class="selectBox" id="selection">
+        <option value="easy">Easy</option>
+        <option value="normal">Normal</option>
+        <option value="hard">Hard</option>
+        <option value="insane">Insane</option>
+      </select>
+      <button id="select1" class="selectButton" onclick="newMode()">
+        Select
+      </button>
     </div>
   </body>
   <script src="main2.js"></script>

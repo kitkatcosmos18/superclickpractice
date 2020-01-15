@@ -106,3 +106,28 @@ body {
 .startButton:hover {
   transform: translateX(-50%) translateY(-50%) scale(1.1, 1.1);
 }
+
+.gamemodeDiv {
+  position: relative;
+  float: right;
+  right: 25px;
+  top: 140px;
+  width: 350px;
+  height: 800px;
+}
+
+.gamemodeP {
+  width: 100px;
+  margin: 0;
+  float: left;
+}
+
+.selectBox {
+  float: left;
+  margin: 0 5px 0 0;
+}
+
+.selectButton {
+  float: left;
+  margin: 0;
+}
