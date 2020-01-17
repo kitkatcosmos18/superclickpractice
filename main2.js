@@ -15,6 +15,7 @@ let selectMode = document.getElementById("selection");
 let board = document.getElementById("board1");
 
 let maxWidth = 65;
+let minWidth = 25;
 
 function getRanNum() {
   ranNumb1 = Math.floor(Math.random() * 80) + 5;
@@ -22,7 +23,7 @@ function getRanNum() {
   ranNumb3 = Math.floor(Math.random() * 80) + 5;
   ranNumb4 = Math.floor(Math.random() * 80) + 5;
 
-  ranNumb5 = Math.floor(Math.random() * maxWidth) + 25;
+  ranNumb5 = Math.floor(Math.random() * maxWidth) + minWidth;
 }
 
 function moveCircle() {
@@ -93,18 +94,22 @@ function newMode() {
   if (selectMode.value == "easy") {
     board.style.width = "400px";
     board.style.height = "400px";
-    maxWidth = 65;
+    maxWidth = 55;
+    minWidth = 25;
   } else if (selectMode.value == "normal") {
     board.style.width = "600px";
     board.style.height = "600px";
-    maxWidth = 65;
+    maxWidth = 45;
+    minWidth = 20;
   } else if (selectMode.value == "hard") {
     board.style.width = "800px";
     board.style.height = "800px";
-    maxWidth = 65;
+    maxWidth = 35;
+    minWidth = 15;
   } else if (selectMode.value == "insane") {
     board.style.width = "900px";
     board.style.height = "900px";
-    maxWidth = 25;
+    maxWidth = 15;
+    minWidth = 10;
   }
 }
