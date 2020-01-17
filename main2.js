@@ -129,7 +129,7 @@ function newTheme() {
     board.style.backgroundColor = "black";
     circle.style.backgroundColor = "white";
   } else if (selectTheme.value == "light") {
-    board.style.backgroundColor = "rgb(207, 207, 207)";
+    board.style.backgroundColor = "rgb(206, 207, 207)";
     circle.style.backgroundColor = "black";
   }
 }
