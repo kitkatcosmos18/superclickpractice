@@ -124,9 +124,12 @@ function newTheme() {
     circle.style.backgroundColor = "white";
   } else if (selectTheme.value == "classic") {
     board.style.backgroundColor = "green";
-    circle.style.backgroundColor = "black";
+    circle.style.backgroundColor = "rgb(9, 0, 61)";
   } else if (selectTheme.value == "dark") {
     board.style.backgroundColor = "black";
     circle.style.backgroundColor = "white";
+  } else if (selectTheme.value == "light") {
+    board.style.backgroundColor = "rgb(207, 207, 207)";
+    circle.style.backgroundColor = "black";
   }
 }
