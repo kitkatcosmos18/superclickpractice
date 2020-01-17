@@ -122,8 +122,9 @@ body {
 }
 
 .gamemodeP {
-  width: 100px;
+  width: 75px;
   margin: 0;
+  padding: 0s;
   float: left;
 }
 

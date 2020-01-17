@@ -12,7 +12,9 @@ let clicks = 0;
 let miss = 0;
 
 let selectMode = document.getElementById("selection");
+let selectTheme = document.getElementById("selection2");
 let board = document.getElementById("board1");
+let circle = document.getElementById("circle01");
 
 let maxWidth = 65;
 let minWidth = 25;
@@ -48,12 +50,14 @@ function startGame() {
   document.getElementById("circle01").style.display = "block";
   document.getElementById("cover01").style.display = "none";
   document.getElementById("select1").style.display = "none";
+  document.getElementById("select2").style.display = "none";
 
   seconds--;
   if (seconds < 0) {
     document.getElementById("circle01").style.display = "none";
     document.getElementById("cover01").style.display = "block";
     document.getElementById("select1").style.display = "block";
+    document.getElementById("select2").style.display = "block";
 
     if (score > highscore) {
       highscore = score;
@@ -111,5 +115,18 @@ function newMode() {
     board.style.height = "900px";
     maxWidth = 15;
     minWidth = 10;
+  }
+}
+
+function newTheme() {
+  if (selectTheme.value == "normal") {
+    board.style.backgroundColor = "rgb(9, 0, 61)";
+    circle.style.backgroundColor = "white";
+  } else if (selectTheme.value == "classic") {
+    board.style.backgroundColor = "green";
+    circle.style.backgroundColor = "black";
+  } else if (selectTheme.value == "dark") {
+    board.style.backgroundColor = "black";
+    circle.style.backgroundColor = "white";
   }
 }
