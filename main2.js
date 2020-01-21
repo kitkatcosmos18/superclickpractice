@@ -42,6 +42,18 @@ function moveCircle() {
   document.getElementById("circle01").style.height = ranNumb5 + "px";
 }
 
+function moveCircle2() {
+  getRanNum();
+
+  document.getElementById("circle01").style.left = ranNumb1 + "%";
+  document.getElementById("circle01").style.right = ranNumb2 + "%";
+  document.getElementById("circle01").style.top = ranNumb3 + "%";
+  document.getElementById("circle01").style.bottom = ranNumb4 + "%";
+
+  document.getElementById("circle01").style.width = ranNumb5 + "px";
+  document.getElementById("circle01").style.height = ranNumb5 + "px";
+}
+
 function miss1() {
   clicks = clicks + 1;
 }
@@ -72,6 +84,7 @@ function startGame() {
 function startGame2() {
   document.getElementById("time1").innerHTML = "Time: " + seconds;
   document.getElementById("score1").innerHTML = "Score: " + score;
+
   document.getElementById("accuracy1").innerHTML =
     "Accuracy: " + Math.floor((1 - (clicks - score) / clicks) * 100) + "%";
   if (seconds < 0) {
@@ -84,6 +97,7 @@ function startGame2() {
 function startGame3() {
   score = 0;
   clicks = 0;
+  moveCircle2();
 }
 
 function goToHome() {
